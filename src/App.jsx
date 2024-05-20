@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DeviceStack from "./components/devices";
 import DisplayCircle from "./components/display";
+import FrameChart from "./components/frame";
 
 function App() {
   const [isConnected, setIsConnected] = useState(false);
@@ -25,6 +26,7 @@ function App() {
 
       <DisplayCircle onConnectionStatusChange={handleConnectionStatus} />
       <DeviceStack />
+      <FrameChart />
     </div>
   );
 }

@@ -199,3 +199,71 @@ body {
   border-radius: 50%;
   padding: 10px;
 }
+
+.frame-chart-section {
+  margin-top: 8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-option {
+  width: 450px;
+  height: 260px;
+  border-radius: 10px;
+}
+.space {
+  height: 500px;
+}
+
+.chart-encompass {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  position: relative;
+}
+
+.btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 150px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: #eaecf0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset-chart {
+  left: 20px !important;
+}
+
+.btn:hover {
+  background-color: #25ac47;
+  color: #fff;
+  width: 148px;
+  height: 38px;
+}
+
+.reset-chart:hover {
+  background-color: #ac2525;
+  color: #fff;
+}
+
+@media (max-width: 459px) {
+  .chart-option {
+    width: 100% !important;
+    height: 260px;
+    border-radius: 10px;
+  }
+
+  .chart-encompass {
+    width: 100%;
+  }
+}
