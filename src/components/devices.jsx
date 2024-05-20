@@ -10,7 +10,7 @@ export default function DeviceStack() {
           Your browser does not support SVG
         </object>
         <p>Current</p>
-        <h1>21</h1>
+        <h1 id="temp">21</h1>
       </div>
       <div className="line-up"></div>
       <div className="device-section-group">

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DeviceStack from "./components/devices";
 import DisplayCircle from "./components/display";
 import FrameChart from "./components/frame";
+import logo from "./img/logo.png";
 
 function App() {
   const [isConnected, setIsConnected] = useState(false);
@@ -22,6 +23,7 @@ function App() {
           }`}
         ></div>
       </div>
+      <img src={logo} alt="logo" className="logo" />
       <h1>Air Quality</h1>
 
       <DisplayCircle onConnectionStatusChange={handleConnectionStatus} />

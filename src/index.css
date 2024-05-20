@@ -59,6 +59,13 @@ body {
   padding-top: 7rem;
 }
 
+.logo {
+  position: absolute;
+  right: 40px;
+  width: 140px;
+  top: 20px;
+}
+
 .second-body > h1 {
   font-size: 2.6rem;
   font-weight: 500;

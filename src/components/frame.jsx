@@ -2,7 +2,7 @@ import React from "react";
 
 export default function FrameChart() {
   const exportData = async () => {
-    const apiKey = "X7NQA0AIG289GWQK";
+    const apiKey = "X7NQA0AIG289GWQK"; // Channel read API key
     const channelId = "2506827";
     const results = "60"; // Number of results you want to fetch
 
@@ -31,7 +31,7 @@ export default function FrameChart() {
   };
 
   const resetChart = async () => {
-    const apiKey = "X7NQA0AIG289GWQK";
+    const accountApiKey = "208A34F7AR5JIEKU"; // Replace with your account-specific API key
     const channelId = "2506827";
 
     const confirmReset = window.confirm(
@@ -40,13 +40,21 @@ export default function FrameChart() {
 
     if (confirmReset) {
       try {
-        const deleteUrl = `https://api.thingspeak.com/channels/${channelId}/feeds.json?api_key=${apiKey}`;
-        const response = await fetch(deleteUrl, { method: "DELETE" });
+        const deleteUrl = `https://api.thingspeak.com/channels/${channelId}/feeds.json`;
+        const response = await fetch(deleteUrl, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: `api_key=${accountApiKey}`,
+        });
 
         if (response.ok) {
           alert("Chart reset successfully!");
         } else {
-          alert("Failed to reset the chart. Please try again.");
+          const errorText = await response.text();
+          console.error("Failed to reset chart:", errorText);
+          alert(`Failed to reset the chart. Error: ${errorText}`);
         }
       } catch (error) {
         console.error("Error resetting chart:", error);
