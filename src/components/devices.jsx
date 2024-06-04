@@ -5,12 +5,12 @@ import modes from "../img/mode.svg";
 export default function DeviceStack() {
   return (
     <div className="device-section">
-      <div className="device-section-group">
-        <object type="image/svg+xml" data={current}>
+      <div className="device-section-group wifi-selection">
+        <object type="image/svg+xml" data={modes}>
           Your browser does not support SVG
         </object>
-        <p>Current</p>
-        <h1 id="temp">21</h1>
+        <p>Mode</p>
+        <h1>Quiet</h1>
       </div>
       <div className="line-up"></div>
       <div className="device-section-group">
@@ -22,11 +22,11 @@ export default function DeviceStack() {
       </div>
       <div className="line-up"></div>
       <div className="device-section-group">
-        <object type="image/svg+xml" data={modes}>
+        <object type="image/svg+xml" data={current}>
           Your browser does not support SVG
         </object>
-        <p>Mode</p>
-        <h1>Quiet</h1>
+        <p>Current</p>
+        <h1 id="temp">21</h1>
       </div>
     </div>
   );
